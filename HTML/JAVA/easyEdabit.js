@@ -36,3 +36,57 @@ var b=bitwiseOR(6,23);
 console.log(b);
 var c=bitwiseXOR(6,23);
 console.log(c);
+
+/* 2)Add up the Numbers from a Single Number
+Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
+Examples
+addUp(4) ➞ 10
+
+addUp(13) ➞ 91
+
+addUp(600) ➞ 180300
+Notes
+Expect any positive number between 1 and 1000*/
+function sum(x){
+	if(isNaN(x)){
+		return "pls enter only nums";
+	}
+	else if(x<0){
+		return "enter only positive nums";
+	}
+	else{
+
+	
+	var total=0;
+	for(i=0;i<=x ;i++){
+
+		total=total+i;
+		
+	}
+	return total;
+}
+}
+
+var s=sum(9);
+console.log(s);
+
+/*3)Matchstick Houses
+This challenge will help you interpret mathematical relationships both algebraically and geometrically.
+
+Matchstick Houses, Steps 1, 2 and 3
+
+Create a function that takes a number (step) as an argument and returns the number of matchsticks in that step. See step 1, 2 and 3 in the image above.
+
+Examples
+matchHouses(1) ➞ 6
+
+matchHouses(4) ➞ 21
+
+matchHouses(87) ➞ 436 */
+
+function match(n){
+return (n*6) - (n-1)
+}
+var a=match(87);
+console.log(a);

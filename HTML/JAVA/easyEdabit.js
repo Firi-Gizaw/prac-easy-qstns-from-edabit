@@ -136,7 +136,31 @@ is equivalent to:
 Math.max(5, 2, 9, 1, 7);*/
 var x=minmax([1,2,3,4,5]);
 console.log(x);
+/*6)What's Hiding Amongst the Crowd?
+A word is on the loose and now has tried to hide amongst a crowd of tall letters! Help write a function to detect what the word is, knowing the following rules:
 
+The wanted word is in lowercase.
+The crowd of letters is all in uppercase.
+Note that the word will be spread out amongst the random letters, but their letters remain in the same order.
+Examples
+detectWord("UcUNFYGaFYFYGtNUH") ➞ "cat"
 
+detectWord("bEEFGBuFBRrHgUHlNFYaYr") ➞ "burglar"
+ */
+function det(a){
+	var hiden="";
+	for(i=0;i<=a.length;i++){
+		var ss=a.charAt(i);
+		if(ss==ss.toLowerCase()){
+			hiden=hiden+ss;
+		}
+	
+
+	}
+	return hiden;
+
+}
+var v=det("WWGFHGGcHKJLaLKJKHBMGBtEDYYULJB");
+console.log(v);
 
 

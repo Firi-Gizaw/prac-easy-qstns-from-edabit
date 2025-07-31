@@ -114,3 +114,29 @@ function shiftToLeft(x, y) {
 }
 var p=shiftToLeft(10,3);
 console.log(p);
+/*5)Find the Smallest and Biggest Numbers
+Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
+Examples
+minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+
+minMax([2334454, 5]) ➞ [5, 2334454] */
+function minmax(x){
+	return [Math.min(...x), Math.max(...x)];
+}/*What do the three dots (...) do here?
+
+They are the spread operator, which takes the array numbers and "spreads" its elements out as individual arguments to the function.
+So this:
+
+Math.max(...numbers);
+
+
+is equivalent to:
+
+Math.max(5, 2, 9, 1, 7);*/
+var x=minmax([1,2,3,4,5]);
+console.log(x);
+
+
+
+

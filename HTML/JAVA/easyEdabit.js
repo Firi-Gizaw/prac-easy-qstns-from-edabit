@@ -9,7 +9,8 @@ bitwiseAND(6, 23) ➞ 00000110
 
 bitwiseOR(6, 23) ➞ 00010111
 
-bitwiseXOR(6, 23) ➞ 00010001*/function bitwiseAND(n1, n2) {
+bitwiseXOR(6, 23) ➞ 00010001*/
+    function bitwiseAND(n1, n2) {
 	var x= n1.toString(2);
 	var y=n2.toString(2);
 	return x&y;
@@ -65,6 +66,7 @@ function sum(x){
 		
 	}
 	return total;
+
 }
 }
 
@@ -148,11 +150,12 @@ detectWord("UcUNFYGaFYFYGtNUH") ➞ "cat"
 detectWord("bEEFGBuFBRrHgUHlNFYaYr") ➞ "burglar"
  */
 function det(a){
-	var hiden="";
+	var hiden="";// =" " we said this b/c booda hiden irratti concatenate gochaa waan deemnuuf wanti wordin irratti concantenate tau ni barbaachisa
 	for(i=0;i<=a.length;i++){
 		var ss=a.charAt(i);
 		if(ss==ss.toLowerCase()){
 			hiden=hiden+ss;
+
 		}
 	
 
@@ -163,4 +166,54 @@ function det(a){
 var v=det("WWGFHGGcHKJLaLKJKHBMGBtEDYYULJB");
 console.log(v);
 
+function firi(x,y){
+	var a=Math.max(...x);
+	var b=Math.max(...y);
+	var c=Math.min(...x);
+	var d=Math.min(...y);
+	if((a<b)&&(c>d)){
+		return "true";
+
+	}
+	else{
+		return "false";
+	}
+}
+var d=firi([1,2,3,4],[2,3]);
+console.log(d);
+
+
+
+/*7)It looks like you're trying to implement a function that checks if the sum of the prime numbers in an array equals the first element of that array. However, there are a few issues in your code that need to be addressed. */
+
+function isPrime(num) {
+  if (num <= 1) return false; // 0 and 1 are not prime numbers
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false; // Found a divisor, not prime
+  }
+  return true; // If no divisors were found, it's prime
+}
+
+function yome(x) {
+  var total = 0;
+  
+  // Loop through the array starting from the second element
+  for (let i = 1; i < x.length; i++) {
+    var num = x[i];
+    // Check if the number is prime
+    if (isPrime(num)) {
+      total += num; // Add to total if it's prime
+    }
+  }
+  
+  // Compare the total of prime numbers to the first element
+  if (total === x[0]) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+var b = yome([13, 4, 4, 4]);
+console.log(b); // Output will be based on the sum of primes in the array
 
